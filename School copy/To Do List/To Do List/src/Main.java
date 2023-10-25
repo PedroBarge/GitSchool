@@ -83,7 +83,7 @@ public class Main {
         //Para ver as Task que ja fora add
         for (int i = 0; i < 1; i++) {
             if (arrayToDo[i] == null) {
-                System.out.println("Lista de tarefas esta vazia");
+                System.out.println("ERROR - Lista de tarefas esta vazia");
             }
         }
         //------------------------------------------------------------------//
