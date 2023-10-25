@@ -58,7 +58,7 @@ public class Main {
                 default:
                     if (opcInput == 10) {
                         System.out.println("A sair da To Do List...");
-                    } else System.out.println("Error");
+                    } else System.out.println("Opção inválida");
 
                     break;
             }
@@ -83,29 +83,34 @@ public class Main {
 
     //------------------------------------------------------------------//
     public static void showList() {
-        System.out.println("Lista de tarefas: ");
         //Para ver as Task que ja fora add
+        System.out.println("Lista de tarefas: ");
+        for (int i = 0; i < taskCount; i++) {
+            if (arrayToDo[i] != null) {
+                System.out.println(i + "- " + arrayToDo[i]);
+            }
 
+        }
         //------------------------------------------------------------------//
-        for (int i = 0; i < arrayToDo.length; i++) {
+        /*for (int i = 0; i < arrayToDo.length; i++) {
             if (arrayToDo[i] != null) {
                 System.out.println(i + "-" + arrayToDo[i]);
             }
-        }
+        }*/
     }
 
     //------------------------------------------------------------------//
     public static void addTask() {
-        System.out.println("Adicionar tarefa ");
-        System.out.println("Por favor inserir uma tarefa");
-        System.out.print("->");
         if (taskCount < maxTask) {
+            System.out.println("Adicionar tarefa ");
+            System.out.println("Por favor inserir uma tarefa");
+            System.out.print("->");
             textFromUser = txtScn.nextLine();
             arrayToDo[taskCount] = textFromUser;
             System.out.println("Adcionado com sucesso: " + arrayToDo[taskCount]);
             taskCount++;
         } else {
-            System.out.println("Error");
+            System.out.println("Limite de tarefas atingido");
         }
         //------------------------------------------------------------------//
         //Para ver as Task que ja fora add
@@ -115,50 +120,43 @@ public class Main {
     //------------------------------------------------------------------//
     public static void editTask() {
         System.out.println("Editar Tarefa ");
-        System.out.println("Qual tarefa quer editar?");
         //------------------------------------------------------------------//
         //Para ver as Task que ja fora add
         showList();
         //------------------------------------------------------------------//
+        System.out.println("Qual tarefa quer editar?");
         System.out.print("Secionar o numero associado: ");
         textFromUser = txtScn.nextLine();
         indexArray = Integer.parseInt(textFromUser);
         //------------------------------------------------------------------//
-        if (arrayToDo[indexArray] != null) {
-            System.out.println("Novo texto: ");
+        if (indexArray >= 0 && indexArray < taskCount) {
+            System.out.print("Inserir texto: ");
             textFromUser = txtScn.nextLine();
             arrayToDo[indexArray] = textFromUser;
-            //------------------------------------------------------------------//
-            //Para ver as Task que ja fora add
             showList();
         } else {
-            System.out.println("Error");
+            System.out.println("Número de tarefa inválido.");
         }
     }
 
     //------------------------------------------------------------------//
     public static void doneTask() {
         System.out.println("Marcar como concluido ");
-        System.out.println("Qual tarefa quer marcar como concluido?");
         //------------------------------------------------------------------//
         showList();
         //------------------------------------------------------------------//
+        System.out.println("Qual tarefa quer marcar como concluido?");
         System.out.print("->");
         textFromUser = txtScn.nextLine();
         indexArray = Integer.parseInt(textFromUser);
         //------------------------------------------------------------------//
-        if (arrayToDo[indexArray] != null) {
-            System.out.println("Tarefa " + arrayToDo[indexArray] + " foi marcada como concuilda");
+        if (indexArray >= 0 && indexArray < taskCount) {
+            System.out.println("Tarefa " + arrayToDo[indexArray] + " foi marcada como concluída");
             arrayToDo[indexArray] += " ✅";
             taskCountConc++;
-            //------------------------------------------------------------------//
-            //Para ver as Task que ja fora add
-            System.out.println("Task totais");
             showList();
-            //------------------------------------------------------------------//
-
         } else {
-            System.out.println("Error");
+            System.out.println("Número de tarefa inválido.");
         }
     }
 
@@ -166,19 +164,25 @@ public class Main {
     public static void undoneTask() {
         int counter = 0;
         System.out.println("Desmarcar como concluido ");
-        System.out.println("Qual tarefa quer desmarcar como concluido?");
         //------------------------------------------------------------------//
         showList();
         //------------------------------------------------------------------//
+        System.out.println("Qual tarefa quer desmarcar como concluido?");
         System.out.print("->");
         textFromUser = txtScn.next();
         indexArray = Integer.parseInt(textFromUser);
         //------------------------------------------------------------------//
-        if (arrayToDo[indexArray].contains(" ✅")) {
-            arrayToDo[indexArray] = arrayToDo[indexArray].replace(" ✅", "");
+        if (indexArray >= 0 && indexArray < taskCount) {
+            if (arrayToDo[indexArray].contains(" ✅")) {
+                arrayToDo[indexArray] = arrayToDo[indexArray].replace(" ✅", "");
+                System.out.println("Tarefa " + arrayToDo[indexArray] + " foi desmarcada como concluída.");
+            } else {
+                System.out.println("Esta tarefa não está marcada como concluída.");
+            }
+            showList();
+        } else {
+            System.out.println("Número de tarefa inválido.");
         }
-
-        System.out.println("Tarefa " + arrayToDo[indexArray] + " foi desmarcada como concuilda\n");
         //------------------------------------------------------------------//
         //Para ver as Task que ja fora add
         System.out.println("Task totais");
@@ -197,20 +201,17 @@ public class Main {
         textFromUser = txtScn.nextLine();
         indexArray = Integer.parseInt(textFromUser);
         //------------------------------------------------------------------//
-        String[] newArrayTemp = new String[arrayToDo.length - 1];
+        //String[] newArrayTemp = new String[arrayToDo.length - 1];
 
-        for (int i = 0; i < arrayToDo.length; i++) {
-            if (i == indexArray) {
-                newArrayTemp[taskCountDel] = arrayToDo[i];
-                arrayToDo[i] = null;
-                taskCountDel++;
+        if (indexArray >= 0 && indexArray < taskCount) {
+            for (int i = indexArray; i < taskCount - 1; i++) {
+                arrayToDo[i] = arrayToDo[i + 1];
             }
-        }
-        System.out.println("Lista de tarefas elimindas");
-        for (int i = 0; i < newArrayTemp.length; i++) {
-            if (newArrayTemp[i] != null) {
-                System.out.println(i+"-"+newArrayTemp[i]);
-            }
+            arrayToDo[taskCount - 1] = null;
+            taskCountDel--;
+            showList();
+        } else {
+            System.out.println("Número de tarefa inválido.");
         }
         //------------------------------------------------------------------//
         //Para ver as Task que ja fora add
@@ -228,11 +229,9 @@ public class Main {
                 }
             }
         }*/
-        Arrays.sort(arrayToDo);
-        System.out.println("Lista organizada:");
-        for (int i = 0; i < arrayToDo.length; i++) {
-            System.out.println(arrayToDo);
-        }
+        Arrays.sort(arrayToDo, 0, taskCount);
+        System.out.println("Lista organizada em ordem alfabética:");
+        showList();
 
     }
 }
