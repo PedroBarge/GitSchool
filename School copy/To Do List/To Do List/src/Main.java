@@ -199,7 +199,7 @@ public class Main {
         //------------------------------------------------------------------//
         String[] newArrayTemp = new String[arrayToDo.length - 1];
 
-        for (int i = 0; i < arrayToDo.length-1; i++) {
+        for (int i = 0; i < arrayToDo.length; i++) {
             if (i == indexArray) {
                 newArrayTemp[taskCountDel] = arrayToDo[i];
                 arrayToDo[i] = null;
