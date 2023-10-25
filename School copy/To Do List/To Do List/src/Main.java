@@ -11,10 +11,12 @@ public class Main {
     static int opcInput;
     static int taskCount = 0;
     static int taskCountConc = 0;
+    static int taskCountDel = 0;
     static int indexArray;
     //------------------------------------------------------------------//
     //Arrays
     static String[] arrayToDo = new String[maxTask];
+    static String[] arrayDeletd = new String[maxTask];
     static String textFromUser;
 
     //------------------------------------------------------------------//
@@ -48,10 +50,10 @@ public class Main {
                     break;
                 //------------------------------------------------------------------//
                 case 5:
-
+                    deleteTask();
                     break;
                 case 6:
-
+                    sortTask();
                     break;
                 default:
                     if (opcInput == 10) {
@@ -62,6 +64,7 @@ public class Main {
             }
         } while (opcInput != 10);
     }
+
     //------------------------------------------------------------------//
     public static void showMenu() {
         System.out.println("Menu: ");
@@ -71,21 +74,18 @@ public class Main {
         System.out.println(" 2- Editar tarefa");
         System.out.println(" 3- Marcar como concliudo");
         System.out.println(" 4- Desmarcar como concliudo");
-        System.out.println(" 5- Elimnar tarefa");
+        System.out.println(" 5- Eliminar tarefa");
         System.out.println(" 6- Organizar de A-Z tarefas");
         System.out.println("10- Fechar aplicação");
         System.out.println("----------");
         System.out.print("Inserir opção: ");
     }
+
     //------------------------------------------------------------------//
     public static void showList() {
         System.out.println("Lista de tarefas: ");
         //Para ver as Task que ja fora add
-        for (int i = 0; i < 1; i++) {
-            if (arrayToDo[i] == null) {
-                System.out.println("ERROR - Lista de tarefas esta vazia");
-            }
-        }
+
         //------------------------------------------------------------------//
         for (int i = 0; i < arrayToDo.length; i++) {
             if (arrayToDo[i] != null) {
@@ -94,6 +94,7 @@ public class Main {
         }
     }
 
+    //------------------------------------------------------------------//
     public static void addTask() {
         System.out.println("Adicionar tarefa ");
         System.out.println("Por favor inserir uma tarefa");
@@ -111,6 +112,7 @@ public class Main {
         showList();
     }
 
+    //------------------------------------------------------------------//
     public static void editTask() {
         System.out.println("Editar Tarefa ");
         System.out.println("Qual tarefa quer editar?");
@@ -134,6 +136,7 @@ public class Main {
         }
     }
 
+    //------------------------------------------------------------------//
     public static void doneTask() {
         System.out.println("Marcar como concluido ");
         System.out.println("Qual tarefa quer marcar como concluido?");
@@ -159,6 +162,7 @@ public class Main {
         }
     }
 
+    //------------------------------------------------------------------//
     public static void undoneTask() {
         int counter = 0;
         System.out.println("Desmarcar como concluido ");
@@ -182,9 +186,53 @@ public class Main {
         //------------------------------------------------------------------//
     }
 
-    public static void deleteTask(){
-        // ir ver nos exercios da maria como se eliminar
+    //------------------------------------------------------------------//
+    public static void deleteTask() {
+        // ir ver nos exercios da Maria como se eliminar
+
+        System.out.println("Eliminar tarefa ");
+        showList();
+        System.out.println("Por favor inserir apenas um numero da tarefa a ser eliminada");
+        System.out.print("->");
+        textFromUser = txtScn.nextLine();
+        indexArray = Integer.parseInt(textFromUser);
+        //------------------------------------------------------------------//
+        String[] newArrayTemp = new String[arrayToDo.length - 1];
+
+        for (int i = 0; i < arrayToDo.length-1; i++) {
+            if (i == indexArray) {
+                newArrayTemp[taskCountDel] = arrayToDo[i];
+                arrayToDo[i] = null;
+                taskCountDel++;
+            }
+        }
+        System.out.println("Lista de tarefas elimindas");
+        for (int i = 0; i < newArrayTemp.length; i++) {
+            if (newArrayTemp[i] != null) {
+                System.out.println(i+"-"+newArrayTemp[i]);
+            }
+        }
+        //------------------------------------------------------------------//
+        //Para ver as Task que ja fora add
+        showList();
+
+    }
+
+    public static void sortTask() {
+        /*for (int i = 0; i < arrayToDo.length ; i++) {
+            for (int j = i + 1; j < arrayToDo.length-1; j++) {
+                if (arrayToDo[i] != null && arrayToDo[j] != null) {
+                    String temp = arrayToDo[j];
+                    arrayToDo[j] = arrayToDo[i];
+                    arrayToDo[i] = temp;
+                }
+            }
+        }*/
+        Arrays.sort(arrayToDo);
+        System.out.println("Lista organizada:");
+        for (int i = 0; i < arrayToDo.length; i++) {
+            System.out.println(arrayToDo);
+        }
+
     }
 }
-
-
