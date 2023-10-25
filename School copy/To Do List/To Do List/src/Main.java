@@ -62,25 +62,31 @@ public class Main {
             }
         } while (opcInput != 10);
     }
-
+    //------------------------------------------------------------------//
     public static void showMenu() {
         System.out.println("Menu: ");
         System.out.println("----------");
-        System.out.println("0- Ver Lista de tarefas");
-        System.out.println("1- Adicionar tarefas");
-        System.out.println("2- Editar tarefa");
-        System.out.println("3- Marcar como concliudo");
-        System.out.println("4- Desmarcar como concliudo");
-        System.out.println("5- Elimnar tarefa");
-        System.out.println("6- Organizar de A-Z tarefas");
+        System.out.println(" 0- Ver Lista de tarefas");
+        System.out.println(" 1- Adicionar tarefas");
+        System.out.println(" 2- Editar tarefa");
+        System.out.println(" 3- Marcar como concliudo");
+        System.out.println(" 4- Desmarcar como concliudo");
+        System.out.println(" 5- Elimnar tarefa");
+        System.out.println(" 6- Organizar de A-Z tarefas");
         System.out.println("10- Fechar aplicação");
         System.out.println("----------");
         System.out.print("Inserir opção: ");
     }
-
+    //------------------------------------------------------------------//
     public static void showList() {
         System.out.println("Lista de tarefas: ");
         //Para ver as Task que ja fora add
+        for (int i = 0; i < 1; i++) {
+            if (arrayToDo[i] == null) {
+                System.out.println("Lista de tarefas esta vazia");
+            }
+        }
+        //------------------------------------------------------------------//
         for (int i = 0; i < arrayToDo.length; i++) {
             if (arrayToDo[i] != null) {
                 System.out.println(i + "-" + arrayToDo[i]);
@@ -161,24 +167,24 @@ public class Main {
         showList();
         //------------------------------------------------------------------//
         System.out.print("->");
-        textFromUser = txtScn.nextLine();
+        textFromUser = txtScn.next();
         indexArray = Integer.parseInt(textFromUser);
         //------------------------------------------------------------------//
-
-        if (arrayToDo[indexArray] == textFromUser) {
-            if (arrayToDo[indexArray].contains(" ✅")){
-                arrayToDo[indexArray] = arrayToDo[indexArray].replace(" ✅" , "");
-            }
-
-            System.out.println("Tarefa " + arrayToDo[indexArray] + " foi desmarcada como concuilda");
-            //------------------------------------------------------------------//
-            //Para ver as Task que ja fora add
-            System.out.println("Task totais");
-            showList();
-            //------------------------------------------------------------------//
-        } else {
-            System.out.println("Error");
+        if (arrayToDo[indexArray].contains(" ✅")) {
+            arrayToDo[indexArray] = arrayToDo[indexArray].replace(" ✅", "");
         }
+
+        System.out.println("Tarefa " + arrayToDo[indexArray] + " foi desmarcada como concuilda\n");
+        //------------------------------------------------------------------//
+        //Para ver as Task que ja fora add
+        System.out.println("Task totais");
+        showList();
+        //------------------------------------------------------------------//
     }
 
+    public static void deleteTask(){
+        // ir ver nos exercios da maria como se eliminar
+    }
 }
+
+
