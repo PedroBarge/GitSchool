@@ -11,10 +11,11 @@ public class Main {
     //------------------------------------------------------------------//
     static int counterBD = 0;
     static String inputUSR;
+    static File file;
     //------------------------------------------------------------------//
 
     //------------------------------------------------------------------//
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("Biblioteca\n");
         menuBase();
         System.out.print("Inserir opção: ");
@@ -24,6 +25,17 @@ public class Main {
                 System.out.println();
                 menuLivros();
                 inputUSR = scn.next();
+                switch (inputUSR){
+                    case "1":
+                        insertBook();
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case "2":
                 System.out.println();
@@ -47,6 +59,7 @@ public class Main {
         System.out.println("2- Leitores");
         System.out.println("0- Sair");
     }
+    //------------------------------------------------------------------//
 
     public static void menuLivros(){
         System.out.println("Menu Livros");
@@ -56,6 +69,7 @@ public class Main {
         System.out.println("3- Emprestimos de Livros");
         System.out.println("0- Menu anterior");
     }
+    //------------------------------------------------------------------//
 
     public static void menuUser(){
         System.out.println("Menu Leitores");
@@ -65,6 +79,22 @@ public class Main {
         System.out.println("3- Emprestimos de Livros");
         System.out.println("0- Menu anterior");
     }
+    //------------------------------------------------------------------//
 
+    public static void insertBook() throws IOException {
+        FileInputStream fileInputStream = new FileInputStream("InsertBook.doc");
+        // OPEN AN OUTPUT STREAM WITH A FILE PATH AS THE DESTINATION
+        FileOutputStream fileOutputStream = new FileOutputStream("InsertBook.doc");
+
+        // WRITE MULTIPLE BYTES TO A FILE
+        String message = "This is a very profound OLA message";
+        fileOutputStream.write(message.getBytes());
+
+        String messagem = "\nTOla";
+        fileOutputStream.write(messagem.getBytes());
+
+        // ALWAYS CLOSE THE STREAMS
+        fileOutputStream.close();
+    }
 
 }
