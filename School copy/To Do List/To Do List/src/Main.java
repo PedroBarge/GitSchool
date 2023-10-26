@@ -208,7 +208,7 @@ public class Main {
                 arrayToDo[i] = arrayToDo[i + 1];
             }
             arrayToDo[taskCount - 1] = null;
-            taskCountDel--;
+            taskCount--;
             showList();
         } else {
             System.out.println("Número de tarefa inválido.");
