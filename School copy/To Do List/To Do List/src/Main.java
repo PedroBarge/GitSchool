@@ -106,6 +106,7 @@ public class Main {
             System.out.println("Por favor inserir uma tarefa");
             System.out.print("->");
             textFromUser = txtScn.nextLine();
+            textFromUser = textFromUser.toLowerCase();
             arrayToDo[taskCount] = textFromUser;
             System.out.println("Adcionado com sucesso: " + arrayToDo[taskCount]);
             taskCount++;
@@ -198,7 +199,7 @@ public class Main {
         showList();
         System.out.println("Por favor inserir apenas um numero da tarefa a ser eliminada");
         System.out.print("->");
-        textFromUser = txtScn.nextLine();
+        textFromUser = txtScn.next();
         indexArray = Integer.parseInt(textFromUser);
         //------------------------------------------------------------------//
         //String[] newArrayTemp = new String[arrayToDo.length - 1];
