@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ATM/ATM.iml" filepath="$PROJECT_DIR$/ATM/ATM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Array Jedi/Array Jedi.iml" filepath="$PROJECT_DIR$/Array Jedi/Array Jedi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArraysExercises/ArraysExercises.iml" filepath="$PROJECT_DIR$/ArraysExercises/ArraysExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Batalha naval/Batalha naval.iml" filepath="$PROJECT_DIR$/Batalha naval/Batalha naval.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fibonacci/Fibonacci.iml" filepath="$PROJECT_DIR$/Fibonacci/Fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hello Word/Hello Word.iml" filepath="$PROJECT_DIR$/Hello Word/Hello Word.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jogo da forca_V2/Jogo da forca_V2.iml" filepath="$PROJECT_DIR$/Jogo da forca_V2/Jogo da forca_V2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kindergarten Garden/Kindergarten Garden.iml" filepath="$PROJECT_DIR$/Kindergarten Garden/Kindergarten Garden.iml" />
+      <module fileurl="file://$PROJECT_DIR$/The Musicians Feast/Musicians/Musicians.iml" filepath="$PROJECT_DIR$/The Musicians Feast/Musicians/Musicians.iml" />
+      <module fileurl="file://$PROJECT_DIR$/The Musicians Feast/Musicians IV/Musicians IV.iml" filepath="$PROJECT_DIR$/The Musicians Feast/Musicians IV/Musicians IV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/The Musicians Feast/Musicians ll/Musicians ll.iml" filepath="$PROJECT_DIR$/The Musicians Feast/Musicians ll/Musicians ll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/The Musicians Feast/Musicians lll/Musicians lll.iml" filepath="$PROJECT_DIR$/The Musicians Feast/Musicians lll/Musicians lll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NumRandom/NumRandom.iml" filepath="$PROJECT_DIR$/NumRandom/NumRandom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/School copy.iml" filepath="$PROJECT_DIR$/.idea/School copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StarWars/StarWars.iml" filepath="$PROJECT_DIR$/StarWars/StarWars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String Methods/String Methods.iml" filepath="$PROJECT_DIR$/String Methods/String Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/To Do List/To Do List.iml" filepath="$PROJECT_DIR$/To Do List/To Do List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/speedyWonka/speedyWonka.iml" filepath="$PROJECT_DIR$/speedyWonka/speedyWonka.iml" />
+    </modules>
+  </component>
+</project>

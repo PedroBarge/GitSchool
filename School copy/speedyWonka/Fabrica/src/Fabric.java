@@ -4,14 +4,14 @@ public class Fabric {
 
     static int perDay = 0;
     static int totalCost;
-    static double cash = 3000000;
+    static double cashMax = 3000000;
     static ArrayList<Car> cars = new ArrayList<>();
-    static int days = 1;
+    static int countDays = 1;
 
     public static void work() {
         while (perDay <= 100) {
             int random = (int) (Math.random() * 100);
-            if (cash > 0 || cash >= 600000 || days <= 30) {
+            if (cashMax > 0 || cashMax >= 600000 || countDays <= 30) {
                 if (random >= 0 && random < 30) {
                     Car car = new Car("SUV", 10000);
                 }
@@ -26,24 +26,26 @@ public class Fabric {
                 }
             }
             perDay++;
-            days++;
+            countDays++;
         }
     }
 
-    public static void test(Car car){
+    public static void test(Car car) {
         int random = (int) (Math.random() * 100);
-        cash = cash - car.priceToMake;
+        cashMax = cashMax - car.priceToMake;
         if (random >= 0 && random <= 15) {
             cars.remove(car);
         } else {
             cars.add(car);
         }
     }
-    public static void nextMonth(){
-        days = 0;
+
+    public static void nextMonth() {
+        countDays = 0;
         System.out.println("Novo mês.....");
     }
-    public static void report(){
+
+    public static void report() {
         double totalProfit = 0;
         int suvTotal = 0;
         int desportivoTotal = 0;
@@ -67,10 +69,10 @@ public class Fabric {
             }
         }
 
-        System.out.println("Relatório (dia " + days + ")\n +" +
+        System.out.println("Relatório (dia " + countDays + ")\n +" +
                 " SUV > " + suvTotal + "units || custo:" + (10000 * suvTotal) + "€ || lucro:" + ((10000 * 1.20) * suvTotal) + "€\n" +
                 " DESPORTIVO > " + desportivoTotal + " units || custo:" + (30000 * desportivoTotal) + "€ || lucro:" + ((30000 * 1.20) * desportivoTotal) + "€\n" +
                 " OFFROAD > " + offroadTotal + "units || custo:" + (20000 * offroadTotal) + "€ || lucro:" + ((20000 * 1.20) * offroadTotal) + "€\n" +
-                " TRICICLO > " + tricicloTotal + "units || custo:" + (5000 * tricicloTotal) + "€ || lucro:" + ((5000 *1.20) * tricicloTotal) + "€");
+                " TRICICLO > " + tricicloTotal + "units || custo:" + (5000 * tricicloTotal) + "€ || lucro:" + ((5000 * 1.20) * tricicloTotal) + "€");
     }
 }
