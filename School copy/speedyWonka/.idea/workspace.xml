@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61f551d0-5fcd-4431-bb6f-3a7cbf7f7544" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Fabrica/src/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fabrica/src/Fabric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../To Do List/To Do List/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../To Do List/To Do List/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fabrica/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fabrica/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="61f551d0-5fcd-4431-bb6f-3a7cbf7f7544" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2XIn4hyoRoUuTGjcDeoZtJgAlFv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,7 +32,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "speedyWonka",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/mindera/Documents/GitHub/GitSchool/School copy/speedyWonka"
   }
 }]]></component>
