@@ -13,11 +13,11 @@ public class Main {
             System.out.println(points.substring(i));
         }
         System.out.println("\nPiramide");
-        for (int i = 0; i < maxLines; i++) {
-            for (int j = 0; j < maxLines - i; j++) {
+        for (int i = 0; i < maxLines; i++) { // diz onde começa a base
+            for (int j = 0; j < maxLines - i; j++) { //espaços
                 System.out.print(" ");
             }
-            for (int k = 0; k <= i * 2; k++) {
+            for (int k = 0; k <= i * 2; k++) { //escrever o X
                 System.out.print("X");
             }
             System.out.println();
