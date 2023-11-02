@@ -25,12 +25,25 @@ public class Main {
 
 
         System.out.println("\nPiramide (Invertido)");
-        for (int i = maxLines ; i >= 0; i--) {
+        for (int i = maxLines; i >= 0; i--) {
             for (int j = 0; j < maxLines - i; j++) {
                 System.out.print(" ");
             }
             for (int k = 0; k <= i * 2; k++) {
                 System.out.print("X");
+            }
+            System.out.println();
+        }
+        //---------------
+        System.out.println("Caixa");
+        for (int i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 5; j++) {
+                if (i == 0 || j == 0 || i == 5 || j == 5 ) {
+                    System.out.print("X");
+                } else {
+                    System.out.print(" ");
+                }
+                System.out.print(" ");
             }
             System.out.println();
         }
