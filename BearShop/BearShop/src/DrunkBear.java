@@ -1,18 +1,22 @@
 import java.util.Random;
 
-public class DrunkBear extends SimpleBear {
+public class DrunkBear extends Bear {
 
     public DrunkBear(String talk, boolean canTalk, int battery) {
         super(talk, canTalk, battery);
     }
-    @Override
-    public void simpleTalk() {
-        Random randomDrunk = new Random();
-        int intDrunk = randomDrunk.nextInt(100) + 1;
 
-        if (intDrunk <= 20) {
-            noTalk();
-            System.out.println("ZZZ...");
-        } else super.simpleTalk();
+    @Override
+    public void seeIfBatteryAndTalk() {
+        Random random = new Random();
+        int valueR = random.nextInt(100) + 1;
+        for (int i = 0; i < 10; i++) {
+            if (valueR >= 20) {
+                super.seeIfBatteryAndTalk();
+            } else {
+                System.out.println("zzz");
+                break;
+            }
+        }
     }
 }

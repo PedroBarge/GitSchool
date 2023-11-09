@@ -1,36 +1,19 @@
-public class SimpleBear {
-    String talk;
-    boolean canTalk;
-    int battery = 100;
+public class SimpleBear extends Bear {
 
     public SimpleBear(String talk, boolean canTalk, int battery) {
-        this.talk = "I love you";
-        this.canTalk = true;
-        this.battery = battery;
+        super(talk, canTalk, battery);
     }
 
-    public void checkBattery() {
-        if (battery <= 0) {
-            System.out.println("No more battery");
-            noTalk();
+    @Override
+    public void seeIfBatteryAndTalk() {
+        for (int i = 0; i < 10; i++) {
+            if (checkBatteryLevel() > 0) {
+                super.seeIfBatteryAndTalk();
+            } else {
+                System.out.println("No more battery");
+                break;
+            }
         }
-    }
-    public boolean noTalk() {
-        canTalk = false;
-        return false;
-    }
-    public void simpleTalk() {
-        if (!noTalk()) {
-            battery -= 20;
-            System.out.println(talk);
-        }
-    }
 
-    public void bearSimple(){
-        do {
-            simpleTalk();
-            checkBattery();
-        }while (noTalk());
     }
-
 }

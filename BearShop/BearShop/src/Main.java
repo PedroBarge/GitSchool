@@ -11,19 +11,21 @@ public class Main {
         System.out.println("Bear Shop");
         System.out.println("Menu");
         System.out.println("1- SimpleBear\n2- CrankBear\n3- DrunkBear");
+        System.out.println("4 open shop");
         System.out.print("->");
         int userChoice = choice.nextInt();
 
-        switch (userChoice){
+        switch (userChoice) {
             case 1:
-                for (int i = 0; i < 10; i++) {
-                    simpleBear.bearSimple();
-                }
+                simpleBear.seeIfBatteryAndTalk();
                 break;
             case 2:
-                crankBear.simpleTalk();
+                crankBear.seeIfBatteryAndTalk();
                 break;
             case 3:
+                drunkBear.seeIfBatteryAndTalk();
+                break;
+            case 4:
                 break;
             default:
         }
