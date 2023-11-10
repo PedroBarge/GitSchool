@@ -9,7 +9,7 @@ public class TheShop {
         valueR = random.nextInt(100) + 1;
 
         if (valueR % 2 == 0){
-
+            SimpleBear simpleBear = new SimpleBear("", true, 100);
         }
     }
 
