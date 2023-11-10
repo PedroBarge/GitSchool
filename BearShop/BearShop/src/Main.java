@@ -4,27 +4,35 @@ public class Main {
     static Scanner choice = new Scanner(System.in);
 
     public static void main(String[] args) {
+        TheShop theShop = new TheShop();
+        int userChoice = 1;
 
-        CrankBear crankBear = new CrankBear("", true, 100);
-        DrunkBear drunkBear = new DrunkBear("", true, 100);
+        while (userChoice != 0) {
+            System.out.println();
+            System.out.println("Bear Shop");
+            System.out.println("+-----+");
+            System.out.println("Menu");
+            System.out.println("1- Create Simple Bear\n2- Create Crank Bear\n3- Create Drunk Bear");
+            System.out.println("4- Open shop (Random bear will be create)");
+            System.out.println("0- Exit");
+            System.out.print("-> ");
+            userChoice = choice.nextInt();
 
-        System.out.println("Bear Shop");
-        System.out.println("Menu");
-        System.out.println("1- SimpleBear\n2- CrankBear\n3- DrunkBear");
-        System.out.println("4 open shop");
-        System.out.print("->");
-        int userChoice = choice.nextInt();
-
-        switch (userChoice) {
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            default:
+            switch (userChoice) {
+                case 1:
+                    theShop.simpleWasCreate();
+                    break;
+                case 2:
+                    theShop.crankWasCreate();
+                    break;
+                case 3:
+                    theShop.drunkWasCrete();
+                    break;
+                case 4:
+                    theShop.openShop();
+                    break;
+                default:
+            }
         }
     }
 }

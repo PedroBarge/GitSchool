@@ -9,7 +9,7 @@ public class CrankBear extends Bear {
         for (int i = 0; i < 10; i++) {
             if (checkBatteryLevel() >= 50) {
                 super.seeIfBatteryAndTalk();
-            }else {
+            } else {
                 System.out.println("Sad song...");
                 break;
             }
