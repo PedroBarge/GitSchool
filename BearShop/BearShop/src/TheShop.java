@@ -1,7 +1,6 @@
 import java.util.Random;
 
 public class TheShop {
-    int numBears;
     static int valueR;
     static int countBear = 0;
 
