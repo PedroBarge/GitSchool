@@ -3,6 +3,7 @@ import java.util.Random;
 public class TheShop {
     int numBears;
     static int valueR;
+    static int countBear = 0;
 
     public void openShop() {
         Random random = new Random();
@@ -17,6 +18,7 @@ public class TheShop {
             System.out.println("Drunk");
             drunkWasCrete();
         }
+        countBear++;
     }
 
     public void simpleWasCreate() {
@@ -32,5 +34,8 @@ public class TheShop {
     public void drunkWasCrete() {
         DrunkBear drunkBear = new DrunkBear("", true, 100);
         drunkBear.seeIfBatteryAndTalk();
+    }
+    public void checkerCounter(){
+        System.out.println("The shop has created "+countBear+" bears");
     }
 }

@@ -31,6 +31,9 @@ public class Main {
                 case 4:
                     theShop.openShop();
                     break;
+                case 0:
+                    theShop.checkerCounter();
+                    break;
                 default:
             }
         }
