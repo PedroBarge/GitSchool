@@ -15,7 +15,7 @@ public class TheShop {
             crankWasCreate();
         } else {
             System.out.println("Drunk");
-            drunkWasCrete();
+            drunkWasCreate();
         }
         countBear++;
     }
@@ -30,7 +30,7 @@ public class TheShop {
         crankBear.seeIfBatteryAndTalk();
     }
 
-    public void drunkWasCrete() {
+    public void drunkWasCreate() {
         DrunkBear drunkBear = new DrunkBear("", true, 100);
         drunkBear.seeIfBatteryAndTalk();
     }

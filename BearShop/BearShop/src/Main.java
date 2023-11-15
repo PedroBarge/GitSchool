@@ -26,7 +26,7 @@ public class Main {
                     theShop.crankWasCreate();
                     break;
                 case 3:
-                    theShop.drunkWasCrete();
+                    theShop.drunkWasCreate();
                     break;
                 case 4:
                     theShop.openShop();
