@@ -2,9 +2,6 @@ import java.util.Random;
 
 public class DrunkBear extends Bear {
 
-    public DrunkBear(String talk, boolean canTalk, int battery) {
-        super(talk, canTalk, battery);
-    }
 
     @Override
     public void seeIfBatteryAndTalk() {

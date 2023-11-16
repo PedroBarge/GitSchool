@@ -1,8 +1,6 @@
 public class SimpleBear extends Bear {
 
-    public SimpleBear(String talk, boolean canTalk, int battery) {
-        super(talk, canTalk, battery);
-    }
+
 
     @Override
     public void seeIfBatteryAndTalk() {

@@ -17,7 +17,8 @@ public class Main {
             System.out.println("0- Exit");
             System.out.print("-> ");
             userChoice = choice.nextInt();
-
+            System.out.println();
+            
             switch (userChoice) {
                 case 1:
                     theShop.simpleWasCreate();

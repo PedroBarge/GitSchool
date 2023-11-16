@@ -21,17 +21,17 @@ public class TheShop {
     }
 
     public void simpleWasCreate() {
-        SimpleBear simpleBear = new SimpleBear("", true, 100);
+        SimpleBear simpleBear = new SimpleBear();
         simpleBear.seeIfBatteryAndTalk();
     }
 
     public void crankWasCreate() {
-        CrankBear crankBear = new CrankBear("", true, 100);
+        CrankBear crankBear = new CrankBear();
         crankBear.seeIfBatteryAndTalk();
     }
 
     public void drunkWasCreate() {
-        DrunkBear drunkBear = new DrunkBear("", true, 100);
+        DrunkBear drunkBear = new DrunkBear();
         drunkBear.seeIfBatteryAndTalk();
     }
     public void checkerCounter(){

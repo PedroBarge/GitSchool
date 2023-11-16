@@ -1,8 +1,6 @@
 public class CrankBear extends Bear {
 
-    public CrankBear(String talk, boolean canTalk, int battery) {
-        super(talk, canTalk, battery);
-    }
+    int sadC = 0;
 
     @Override
     public void seeIfBatteryAndTalk() {
@@ -10,7 +8,11 @@ public class CrankBear extends Bear {
             if (checkBatteryLevel() >= 50) {
                 super.seeIfBatteryAndTalk();
             } else {
-                System.out.println("Sad song...");
+                canTalk = false;
+                if (sadC == 0) {
+                    System.out.println("Sad song...");
+                    sadC++;
+                }
                 break;
             }
         }
