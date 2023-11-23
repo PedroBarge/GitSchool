@@ -1,40 +1,55 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class TheShop {
     static int valueR;
     static int countBear = 0;
 
+    // TODO: 23/11/2023 Criar um array list para guardar todos os ursos. Fazer outra loja e comparar para quem fez mais ursos
+
+    ArrayList<String> arrayListBearsFromStore = new ArrayList<>();
+
     public void openShop() {
         Random random = new Random();
         valueR = random.nextInt(100) + 1;
         if (valueR % 2 == 0) {
-            System.out.println("Simple");
             simpleWasCreate();
         } else if (valueR % 5 == 0) {
-            System.out.println("Crank");
             crankWasCreate();
         } else {
-            System.out.println("Drunk");
             drunkWasCreate();
         }
-        countBear++;
     }
 
     public void simpleWasCreate() {
+        System.out.println("Simple");
         SimpleBear simpleBear = new SimpleBear();
         simpleBear.seeIfBatteryAndTalk();
+        arrayListBearsFromStore.add("Simple Bear");
+        countBear++;
     }
 
     public void crankWasCreate() {
+        System.out.println("Crank");
         CrankBear crankBear = new CrankBear();
         crankBear.seeIfBatteryAndTalk();
+        arrayListBearsFromStore.add("Crank Bear");
+        countBear++;
     }
 
     public void drunkWasCreate() {
+        System.out.println("Drunk");
         DrunkBear drunkBear = new DrunkBear();
         drunkBear.seeIfBatteryAndTalk();
+        arrayListBearsFromStore.add("Drunk Bear");
+        countBear++;
     }
-    public void checkerCounter(){
-        System.out.println("The shop has created "+countBear+" bears");
+
+    public void checkerCounter() {
+        System.out.println("The shop has created " + countBear + " bears");
+        System.out.println("The list of bears: ");
+        for (int i = 0; i < arrayListBearsFromStore.size(); i++) {
+            System.out.println(i+1+"-"+arrayListBearsFromStore.get(i));
+        }
     }
 }

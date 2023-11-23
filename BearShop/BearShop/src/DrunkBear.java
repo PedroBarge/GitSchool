@@ -1,8 +1,6 @@
 import java.util.Random;
 
 public class DrunkBear extends Bear {
-
-
     @Override
     public void seeIfBatteryAndTalk() {
         Random random = new Random();

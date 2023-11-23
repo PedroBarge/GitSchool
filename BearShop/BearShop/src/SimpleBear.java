@@ -1,7 +1,4 @@
 public class SimpleBear extends Bear {
-
-
-
     @Override
     public void seeIfBatteryAndTalk() {
         for (int i = 0; i < 10; i++) {
@@ -12,6 +9,5 @@ public class SimpleBear extends Bear {
                 break;
             }
         }
-
     }
 }

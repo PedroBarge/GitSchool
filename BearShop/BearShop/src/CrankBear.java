@@ -1,7 +1,5 @@
 public class CrankBear extends Bear {
-
     int sadC = 0;
-
     @Override
     public void seeIfBatteryAndTalk() {
         for (int i = 0; i < 10; i++) {
