@@ -4,9 +4,6 @@ import java.util.Random;
 public class TheShop {
     static int valueR;
     static int countBear = 0;
-
-    // TODO: 23/11/2023 Criar um array list para guardar todos os ursos. Fazer outra loja e comparar para quem fez mais ursos
-
     ArrayList<String> arrayListBearsFromStore = new ArrayList<>();
 
     public void openShop() {

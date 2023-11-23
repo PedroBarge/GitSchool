@@ -20,7 +20,7 @@ public class Main {
             System.out.println("6- Compare Shops");
             System.out.println("0- Exit");
             System.out.print("-> ");
-           
+
             userChoice = choice.nextInt();
             System.out.println();
 
@@ -56,6 +56,11 @@ public class Main {
     private static void compareTwoShops() {
         if (theShop.arrayListBearsFromStore.size() > theOtherShop.arrayListBearsFromOtherStore.size()) {
             System.out.println("\nMy shop make more Bears");
-        } else System.out.println("\nThe other Shop make more Bears");
+        } else {
+            System.out.println("\nThe other Shop make more Bears");
+        }
+        if (theShop.arrayListBearsFromStore.size() == theOtherShop.arrayListBearsFromOtherStore.size()) {
+            System.out.println("\nThe two make the same amount of Bears");
+        }
     }
 }
